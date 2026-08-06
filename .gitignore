@@ -1,0 +1,6 @@
+# Binary packages are published as GitHub Release assets.
+*.apk
+*.sha256
+*.tar.gz
+*.zip
+SHA256SUMS
