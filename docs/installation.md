@@ -18,11 +18,11 @@ Linux 可执行 `uname -m` 查看架构。输出 `x86_64` 选择 amd64，输出 
 
 ## 2. Linux 与树莓派
 
-以下示例以 v26.8.1 arm64 为例：
+以下示例以 v26.8.2 arm64 为例：
 
 ```bash
-tar -xzf linker-dashboard-v26.8.1-linux-arm64.tar.gz
-cd linker-dashboard-v26.8.1-linux-arm64
+tar -xzf linker-dashboard-v26.8.2-linux-arm64.tar.gz
+cd linker-dashboard-v26.8.2-linux-arm64
 chmod +x linker-dashboard
 sudo ./linker-dashboard --addr :8080 --data /var/lib/linker-dashboard
 ```
@@ -38,7 +38,7 @@ curl http://127.0.0.1:8080/api/controller/info
 
 ### 安装为开机自启服务
 
-v26.8.1 的 Linux 包包含 systemd 安装脚本：
+v26.8.2 的 Linux 包包含 systemd 安装脚本：
 
 ```bash
 sudo ./install-service.sh
@@ -96,7 +96,7 @@ sudo systemctl enable --now bluetooth
 
 ### Windows 开机自启
 
-v26.8.1 包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
+v26.8.2 包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass

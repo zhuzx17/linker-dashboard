@@ -5,7 +5,7 @@
 
 ## 1. 安装 Android App
 
-1. 从 [v26.8.1 Release](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1)
+1. 从 [v26.8.2 Release](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2)
    下载 APK 和对应 `.sha256` 文件。
 2. 核对 SHA-256。
 3. 在 Android 设置中允许当前浏览器或文件管理器“安装未知应用”。
@@ -33,7 +33,7 @@
 
 准备条件：
 
-- 控制器安装 v26.8.1，并启用 BlueZ；
+- 控制器安装 v26.8.2，并启用 BlueZ；
 - 写入 Wi-Fi 时安装 NetworkManager；
 - 手机开启蓝牙并允许“附近设备”权限；
 - 手机已经登录 LinkerBot 云账号。
@@ -47,8 +47,8 @@
 5. 点击配置并关联，等待 App 提示完成。
 6. 回到控制器列表，设备显示在线后进入控制页面。
 
-开放网络的 Wi-Fi 密码可以留空；加密 Wi-Fi 密码至少 8 位，云账号密码至少 10 位。v26.8.1
-输入过短时可能只表现为提交失败，因此应先确认长度符合要求。
+开放网络的 Wi-Fi 密码可以留空；加密 Wi-Fi 密码至少 8 位，云账号密码至少 10 位。v26.8.2
+会在密码过短时直接显示长度要求。
 
 BLE 窗口超时后重启控制台服务即可重新开放：
 

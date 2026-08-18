@@ -2,6 +2,23 @@
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
 
+## [v26.8.2] - 2026-08-18
+
+### Added
+
+- 增加全型号 WRC 手势舞，并完善剪刀石头布必胜模式与高频视觉识别。
+- 为 O6 和 O6i 手势舞增加独立严格时间线。
+
+### Changed
+
+- 更新 L10、L30、O30i 的内置手势、对指和 WAIC 序列。
+- 完善 Linux 主机 BLE 发现、移动端密码提示和窄屏布局。
+
+### Fixed
+
+- 将 C0 查询返回 `NONE` 的设备识别为 O6i，并根据 CAN ID 判断左右手。
+- 升级 `nanoid` 到安全版本，前端依赖审计恢复为 0 个已知漏洞。
+
 ## [v26.8.1] - 2026-08-04
 
 ### Added
@@ -51,6 +68,7 @@
 - `gocan` 更新到 `v1.0.0`。
 - `socketcan-init` 更新到 `v1.0.1`，移除本地 `replace` 依赖。
 
+[v26.8.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2
 [v26.8.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1
 [v26.8.0]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.0
 [v26.7.0]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.7.0
