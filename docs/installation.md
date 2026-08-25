@@ -18,27 +18,27 @@ Linux 可执行 `uname -m` 查看架构。输出 `x86_64` 选择 amd64，输出 
 
 ## 2. Linux 与树莓派
 
-以下示例以 v26.8.2 arm64 为例：
+以下示例以 v26.8.3 arm64 为例：
 
 ```bash
-tar -xzf linker-dashboard-v26.8.2-linux-arm64.tar.gz
-cd linker-dashboard-v26.8.2-linux-arm64
+tar -xzf linker-dashboard-v26.8.3-linux-arm64.tar.gz
+cd linker-dashboard-v26.8.3-linux-arm64
 chmod +x linker-dashboard
-sudo ./linker-dashboard --addr :8080 --data /var/lib/linker-dashboard
+sudo ./linker-dashboard --addr :7081 --data /var/lib/linker-dashboard
 ```
 
 控制台通常需要 root 或 `CAP_NET_ADMIN` 权限来初始化 SocketCAN。启动成功后在本机验证：
 
 ```bash
-curl http://127.0.0.1:8080/api/controller/info
+curl http://127.0.0.1:7081/api/controller/info
 ```
 
-浏览器访问 `http://127.0.0.1:8080`。手机或其他电脑与控制台在同一局域网时，访问
-`http://<Linux 主机 IP>:8080`。
+浏览器访问 `http://127.0.0.1:7081`。手机或其他电脑与控制台在同一局域网时，访问
+`http://<Linux 主机 IP>:7081`。
 
 ### 安装为开机自启服务
 
-v26.8.2 的 Linux 包包含 systemd 安装脚本：
+v26.8.3 的 Linux 包包含 systemd 安装脚本：
 
 ```bash
 sudo ./install-service.sh
@@ -77,11 +77,11 @@ sudo systemctl enable --now bluetooth
 3. 在解压目录打开 PowerShell，执行：
 
 ```powershell
-.\linker-dashboard.exe --addr :8080 --data .\data
+.\linker-dashboard.exe --addr :7081 --data .\data
 ```
 
 4. Windows 防火墙提示时允许“专用网络”访问。
-5. 浏览器打开 `http://127.0.0.1:8080`。
+5. 浏览器打开 `http://127.0.0.1:7081`。
 
 ### Windows 适配器
 
@@ -96,7 +96,7 @@ sudo systemctl enable --now bluetooth
 
 ### Windows 开机自启
 
-v26.8.2 包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
+v26.8.3 包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
@@ -104,7 +104,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 ```
 
 脚本会把程序安装到 `C:\Program Files\LinkerBot\Dashboard`，数据保存到
-`C:\ProgramData\LinkerBot\Dashboard`，创建开机任务并放行 TCP 8080 与 UDP 5353。
+`C:\ProgramData\LinkerBot\Dashboard`，创建开机任务并放行 TCP 7081 与 UDP 5353。
 
 ## 4. 首次数据释放与升级
 

@@ -7,34 +7,34 @@
 Linux：
 
 ```bash
-sudo ./linker-dashboard --addr :8080 --data /var/lib/linker-dashboard --debug
+sudo ./linker-dashboard --addr :7081 --data /var/lib/linker-dashboard --debug
 ```
 
 Windows PowerShell：
 
 ```powershell
-.\linker-dashboard.exe --addr :8080 --data .\data --debug
+.\linker-dashboard.exe --addr :7081 --data .\data --debug
 ```
 
-如果提示端口被占用，更换端口，例如 `--addr :8081`，并用新端口访问。
+如果提示端口被占用，更换端口，例如 `--addr :7082`，并用新端口访问。
 
 ## 浏览器或 App 无法连接
 
 在控制台主机上执行：
 
 ```bash
-curl http://127.0.0.1:8080/api/controller/info
+curl http://127.0.0.1:7081/api/controller/info
 ```
 
 - 本机也失败：检查程序是否运行、端口是否被占用以及服务日志。
-- 本机成功、手机失败：确认两端在同一网络，并放行 TCP 8080。
+- 本机成功、手机失败：确认两端在同一网络，并放行 TCP 7081。
 - 手动 IP 可用、自动扫描不到：检查 UDP 5353、mDNS 和路由器的客户端隔离设置。
 - 酒店或展会访客 Wi-Fi 经常禁止终端互访，可改用自建热点或云端控制。
 
 Linux 防火墙示例：
 
 ```bash
-sudo ufw allow 8080/tcp
+sudo ufw allow 7081/tcp
 sudo ufw allow 5353/udp
 ```
 

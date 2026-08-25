@@ -2,6 +2,15 @@
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
 
+## [v26.8.3] - 2026-08-25
+
+### Changed
+
+- 将控制台默认监听端口从 `8080` 调整为 `7081`。
+- 同步前端开发代理、Linux/Windows 自启动、树莓派部署检查和防火墙规则。
+- 更新移动端控制器地址提示、安装说明和故障排查文档。
+- 保留通过 `--addr` 或 Windows `-Port` 参数自定义监听端口的能力。
+
 ## [v26.8.2] - 2026-08-18
 
 ### Added
@@ -68,6 +77,7 @@
 - `gocan` 更新到 `v1.0.0`。
 - `socketcan-init` 更新到 `v1.0.1`，移除本地 `replace` 依赖。
 
+[v26.8.3]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.3
 [v26.8.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2
 [v26.8.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1
 [v26.8.0]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.0
