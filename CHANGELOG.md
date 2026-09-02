@@ -2,6 +2,14 @@
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
 
+## [v26.8.4] - 2026-09-02
+
+### Fixed
+
+- 将并联灵巧手的型号名称和标识从 `L25` 统一更正为 `L20`。
+- 同步设备识别、型号描述、内置手势/手势舞、2D 跟随映射、状态展示和文档。
+- 保留已有 `L20Lite` 型号不变。
+
 ## [v26.8.3] - 2026-08-25
 
 ### Changed
@@ -77,6 +85,7 @@
 - `gocan` 更新到 `v1.0.0`。
 - `socketcan-init` 更新到 `v1.0.1`，移除本地 `replace` 依赖。
 
+[v26.8.4]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.4
 [v26.8.3]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.3
 [v26.8.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2
 [v26.8.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1
