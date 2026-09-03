@@ -2,6 +2,25 @@
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
 
+## [v26.9.0] - 2026-09-03
+
+### Added
+
+- 新增全型号剪刀石头布必胜模式与高频视觉跟踪（独立推理层，最高 1280×960 / 100 Hz）。
+- 补齐 L6、O6、O7、L10、L20Lite、L20 经典 CAN 全功能码控制与前端功能码面板。
+- 新增 Gesture 与 Dance 全链路：多型号手势数据模型、手势舞执行引擎与实时状态同步。
+- 新增 CAN 帧日志（RX/TX）与多维过滤、明暗主题、Overview 四段式重构。
+
+### Changed
+
+- 上游 Go 依赖升级至 `gocan v1.1.0` 与 `socketcan-init v1.1.0`。
+- 发布包随包携带 MiniCANFD 动态库：Linux amd64 `libcanbus.so`、Linux arm64
+  `libcanbus_arm64.so`、Windows amd64 `HCanbus.dll`；Windows arm64 不含动态库。
+
+### Fixed
+
+- 修复流式上报设备（O20）读取极慢、并发写 WebSocket panic、重新扫描后设备消失等问题。
+
 ## [v26.8.4] - 2026-09-02
 
 ### Fixed
