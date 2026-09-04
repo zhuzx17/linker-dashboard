@@ -2,6 +2,13 @@
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
 
+## [v26.9.1] - 2026-09-04
+
+### Fixed
+
+- 升级 `browserslist` 至 4.28.8，修复 npm audit 报告的高危漏洞。
+- 升级 `@xmldom/xmldom` 至 0.9.12，修复 XML 片段注入中危漏洞。
+
 ## [v26.9.0] - 2026-09-03
 
 ### Added
@@ -105,6 +112,7 @@
 - `socketcan-init` 更新到 `v1.0.1`，移除本地 `replace` 依赖。
 
 [v26.8.4]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.4
+[v26.9.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.1
 [v26.8.3]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.3
 [v26.8.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2
 [v26.8.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1

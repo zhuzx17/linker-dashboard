@@ -10,17 +10,17 @@ Linker Dashboard 是 LinkerBot 全系列灵巧手的统一控制台。本仓库�
 
 ## 下载最新版
 
-当前推荐版本为 **v26.9.0**。
+当前推荐版本为 **v26.9.1**。
 
 | 平台 | 适用设备 | 下载 |
 | --- | --- | --- |
-| Linux amd64 | 常见 x86-64 电脑、工控机和服务器 | [tar.gz](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.0/linker-dashboard-v26.9.0-linux-amd64.tar.gz) |
-| Linux arm64 | 运行 64 位 Linux 的树莓派和 ARM 主机 | [tar.gz](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.0/linker-dashboard-v26.9.0-linux-arm64.tar.gz) |
-| Windows amd64 | 常见 Intel/AMD Windows 电脑 | [zip](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.0/linker-dashboard-v26.9.0-windows-amd64.zip) |
-| Windows arm64 | ARM64 Windows 设备 | [zip](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.0/linker-dashboard-v26.9.0-windows-arm64.zip) |
-| Android | Android 手机和平板 | [APK](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.0/linker-dashboard-v26.9.0-android-debug.apk) |
+| Linux amd64 | 常见 x86-64 电脑、工控机和服务器 | [tar.gz](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.1/linker-dashboard-v26.9.1-linux-amd64.tar.gz) |
+| Linux arm64 | 运行 64 位 Linux 的树莓派和 ARM 主机 | [tar.gz](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.1/linker-dashboard-v26.9.1-linux-arm64.tar.gz) |
+| Windows amd64 | 常见 Intel/AMD Windows 电脑 | [zip](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.1/linker-dashboard-v26.9.1-windows-amd64.zip) |
+| Windows arm64 | ARM64 Windows 设备 | [zip](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.1/linker-dashboard-v26.9.1-windows-arm64.zip) |
+| Android | Android 手机和平板 | [APK](https://github.com/zhuzx17/linker-dashboard/releases/download/v26.9.1/linker-dashboard-v26.9.1-android-debug.apk) |
 
-[下载 v26.9.0 的全部附件和 SHA-256 校验文件](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.0)
+[下载 v26.9.1 的全部附件和 SHA-256 校验文件](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.1)
 
 > Android APK 当前使用调试证书签名，适合现场测试和内部使用。正式商店发布前需要改用长期
 > 保存的 release keystore；不同签名的 APK 不能直接覆盖安装。
@@ -29,6 +29,7 @@ Linker Dashboard 是 LinkerBot 全系列灵巧手的统一控制台。本仓库�
 
 | 版本 | 建议用途 | 主要能力 |
 | --- | --- | --- |
+| [v26.9.1](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.1) | 当前推荐版本 | 修复前端 `browserslist` 高危与 `@xmldom/xmldom` 中危依赖告警 |
 | [v26.9.0](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.0) | 当前完整版本 | 剪刀石头布必胜模式、经典 CAN 全功能码、Gesture/Dance 全链路与 CAN 帧日志；发布包随包携带 MiniCANFD 动态库 |
 | [v26.8.4](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.4) | 稳定回退版本 | 将并联灵巧手型号从 L25 统一更正为 L20 |
 | [v26.8.3](https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.3) | 当前完整版本 | 默认使用 7081 端口，并同步开发、部署和移动端配置 |
@@ -70,14 +71,14 @@ Linker Dashboard 是 LinkerBot 全系列灵巧手的统一控制台。本仓库�
 Linux：
 
 ```bash
-sha256sum -c linker-dashboard-v26.9.0-linux-amd64.tar.gz.sha256
+sha256sum -c linker-dashboard-v26.9.1-linux-amd64.tar.gz.sha256
 ```
 
 Windows PowerShell：
 
 ```powershell
-Get-FileHash .\linker-dashboard-v26.9.0-windows-amd64.zip -Algorithm SHA256
-Get-Content .\linker-dashboard-v26.9.0-windows-amd64.zip.sha256
+Get-FileHash .\linker-dashboard-v26.9.1-windows-amd64.zip -Algorithm SHA256
+Get-Content .\linker-dashboard-v26.9.1-windows-amd64.zip.sha256
 ```
 
 两处哈希值必须完全一致。校验失败时不要运行文件，应删除后重新下载。
