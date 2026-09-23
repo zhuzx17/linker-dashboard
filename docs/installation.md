@@ -18,11 +18,11 @@ Linux 可执行 `uname -m` 查看架构。输出 `x86_64` 选择 amd64，输出 
 
 ## 2. Linux 与树莓派
 
-以下示例以 v26.8.3 arm64 为例：
+以下示例以 v26.9.2 arm64 为例：
 
 ```bash
-tar -xzf linker-dashboard-v26.8.3-linux-arm64.tar.gz
-cd linker-dashboard-v26.8.3-linux-arm64
+tar -xzf linker-dashboard-v26.9.2-linux-arm64.tar.gz
+cd linker-dashboard-v26.9.2-linux-arm64
 chmod +x linker-dashboard
 sudo ./linker-dashboard --addr :7081 --data /var/lib/linker-dashboard
 ```
@@ -38,7 +38,7 @@ curl http://127.0.0.1:7081/api/controller/info
 
 ### 安装为开机自启服务
 
-v26.8.3 的 Linux 包包含 systemd 安装脚本：
+Linux 包包含 systemd 安装脚本：
 
 ```bash
 sudo ./install-service.sh
@@ -88,6 +88,9 @@ sudo systemctl enable --now bluetooth
 - PEAK PCAN 用于经典 CAN。安装 PEAK 官方驱动，并将与程序架构一致的
   `PCANBasic.dll` 放在程序目录或 `PATH` 中。
 - 官方 CANable 2.0 SLCAN-FD（VID:PID `16D0:117E`）可自动发现，用于 CAN FD。
+- MiniCANFD 使用 Windows amd64 包自带的 x64 `HCanbus.dll`。将 DLL 与 EXE 放在同一
+  目录，并安装厂家要求的 WinUSB 驱动和 VC++ 运行库；无需 `.h` 或 `.lib`。
+  不要替换为旧版或 x86 DLL，Windows arm64 包暂不支持此后端。
 - 其他兼容 SLCAN-FD 固件需要显式指定串口：
 
 ```powershell
@@ -96,7 +99,7 @@ sudo systemctl enable --now bluetooth
 
 ### Windows 开机自启
 
-v26.8.3 包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
+Windows 包包含 `install-autostart.ps1`。以管理员身份打开 PowerShell，在解压目录执行：
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
@@ -115,7 +118,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 1. 停止控制台服务。
 2. 备份整个 data 目录。
-3. 替换程序文件，保留原 data 目录。
+3. 替换程序文件及随包动态库，保留原 data 目录。
 4. 启动后确认型号、手势和设备覆盖配置正常。
 
 要重新生成新版本的内嵌预设，应先备份并移走旧 data 目录，再启动新程序。不要直接删除仍需
