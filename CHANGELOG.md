@@ -1,6 +1,7 @@
 # Changelog
 
 本文件记录公开分发版本的用户可见变化。完整附件位于各版本的 GitHub Release 页面。
+操作步骤统一见[最新使用指南](docs/README.md)。
 
 ## [v26.9.2] - 2026-09-23
 
@@ -126,7 +127,9 @@
 - `socketcan-init` 更新到 `v1.0.1`，移除本地 `replace` 依赖。
 
 [v26.8.4]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.4
+[v26.9.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.2
 [v26.9.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.1
+[v26.9.0]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.9.0
 [v26.8.3]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.3
 [v26.8.2]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.2
 [v26.8.1]: https://github.com/zhuzx17/linker-dashboard/releases/tag/v26.8.1
